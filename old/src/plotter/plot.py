@@ -1,7 +1,7 @@
 from io import BytesIO
 from PIL import Image, ImageDraw
 from typing import List, Dict, Optional
-from src.helpers import generate_coordinates
+from .plot_helpers import generate_coordinates
 from planner.cust_types import IMandrelParameters, ITowParameters
 
 

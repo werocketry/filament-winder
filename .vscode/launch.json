@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug cli_entry",
+            "type": "python",
+            "request": "launch",
+            "module": "cli_entry",
+            "args": [
+                "plan",
+                "--output",
+                "out.wind",
+                "input.json"
+            ],
+            "cwd": "${workspaceFolder}/old/src",
+            "console": "integratedTerminal"
+        }
+    ]
+}

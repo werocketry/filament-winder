@@ -1,6 +1,6 @@
 from typing import List, Dict
 from .cust_types import TCoordinate, ECoordinateAxes, AxisLookup, TCoordinateAxes
-from plan_helpers import interpolate_coordinates, serialize_coordinate  # Helpers inside src
+from .plan_helpers import Helpers
 from helpers import strip_precision  # Helpers outside src
 
 
@@ -40,8 +40,8 @@ class WinderMachine:
         if not do_segment_move:
             if self.verbose_output:
                 self.insert_comment(
-                    f"Move from {serialize_coordinate(self.last_position)} "
-                    f"to {serialize_coordinate(complete_end_position)} as a simple move"
+                    f"Move from {Helpers.serialize_coordinate(self.last_position)} "
+                    f"to {Helpers.serialize_coordinate(complete_end_position)} as a simple move"
                 )
             return self.move_segment(position)
 
@@ -57,11 +57,11 @@ class WinderMachine:
 
         if self.verbose_output:
             self.insert_comment(
-                f"Move from {serialize_coordinate(self.last_position)} "
-                f"to {serialize_coordinate(complete_end_position)} in {num_segments} segments"
+                f"Move from {Helpers.serialize_coordinate(self.last_position)} "
+                f"to {Helpers.serialize_coordinate(complete_end_position)} in {num_segments} segments"
             )
 
-        for intermediate_position in interpolate_coordinates(
+        for intermediate_position in Helpers.interpolate_coordinates(
             self.last_position, complete_end_position, num_segments
         ):
             self.move_segment(intermediate_position)

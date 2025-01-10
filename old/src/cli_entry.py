@@ -1,7 +1,7 @@
 import argparse
 import json
 from marlin_port import MarlinPort
-from planner.planner import plan_wind
+from planner.planner import planWind
 from plotter.plot import plot_gcode
 import sys
 from pathlib import Path
@@ -48,7 +48,7 @@ def generate_gcode(file: str, output: str, verbose: bool):
     with open(file, "r") as f:
         wind_definition = json.load(f)
 
-    wind_commands = plan_wind(wind_definition, verbose)
+    wind_commands = planWind(wind_definition, verbose)
 
     with open(output, "w") as f:
         f.write("\n".join(wind_commands))
