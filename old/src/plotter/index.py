@@ -1,3 +1,3 @@
 from .plot import *
-from .helpers import *
+from .plot_helpers import *
 from .types import *

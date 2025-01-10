@@ -1,6 +1,6 @@
 from typing import List, Dict
-from types import TCoordinate, ECoordinateAxes, AxisLookup, TCoordinateAxes
-from src.helpers import interpolate_coordinates, serialize_coordinate  # Helpers inside src
+from .cust_types import TCoordinate, ECoordinateAxes, AxisLookup, TCoordinateAxes
+from plan_helpers import interpolate_coordinates, serialize_coordinate  # Helpers inside src
 from helpers import strip_precision  # Helpers outside src
 
 

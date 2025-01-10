@@ -1,7 +1,7 @@
 from typing import List, Dict, Optional
 from helpers import rad_to_deg, deg_to_rad
-from machine import WinderMachine
-from types import (
+from .machine import WinderMachine
+from .cust_types import (
     WindParameters,
     MandrelParameters,
     TowParameters,

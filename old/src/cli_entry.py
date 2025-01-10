@@ -1,8 +1,8 @@
 import argparse
 import json
 from marlin_port import MarlinPort
-from planner import plan_wind
-from plotter import plot_gcode
+from planner.planner import plan_wind
+from plotter.plot import plot_gcode
 import sys
 from pathlib import Path
 

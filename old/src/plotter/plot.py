@@ -2,7 +2,7 @@ from io import BytesIO
 from PIL import Image, ImageDraw
 from typing import List, Dict, Optional
 from src.helpers import generate_coordinates
-from planner.types import IMandrelParameters, ITowParameters
+from planner.cust_types import IMandrelParameters, ITowParameters
 
 
 class WindParameters:
